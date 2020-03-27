@@ -1,0 +1,133 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#bodyIndex{
+    background-size: 100%;
+	text-align: center;
+	background-image: url('../img/fundo.jpeg');	
+    background-repeat: no-repeat;	
+   	font-family: 'Numans', sans-serif;
+	
+}
+
+#bodyJogo{
+    background-size: 100%;
+	text-align: center;
+    background-image: url('../img/fundoJogo.png');		
+	background-repeat: no-repeat;	
+	font-family: 'Numans', sans-serif;
+	
+}
+
+#divPlay{
+
+    
+    width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align:center;
+ color:black;
+  
+  /* pura mágica */
+  position: absolute;
+  top: 25%; /* posiciona na metade da tela */
+  margin-top: -25px; /* e retrocede metade da altura */
+    
+    
+}
+
+#divEspaco{
+	visibility: hidden;
+}
+
+#game{   
+    margin-top: 2;
+    position: relative;
+    width: 670px;
+	height: 440px;
+	border: 1px solid #111;
+	border-radius: 10px;
+	margin: 10px auto;
+	background-color:azure; 
+}
+
+.card{
+	width: 160px;
+	height: 200px;
+	perspective: 600px;
+	position: absolute;
+	border-radius: 10px;
+}
+
+.face{
+	border-radius: 10px;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transition: all 1s;
+	backface-visibility: hidden;
+}
+
+.front{
+	transform: rotateY(-180deg);
+}
+
+.flipped.front{
+	transform: rotateY(0deg);
+}
+
+.back{
+	background: url(../img/verso.jpg);
+}
+
+.flipped.back{
+	transform: rotateY(180deg);
+}
+
+.card:hover, .face.flipped{
+	box-shadow: 0 0 10px #aaa;
+}
+
+.face.flipped.match{
+	box-shadow: 0 0 10px #0f0;
+}
+
+#match{
+	position: relative;
+	margin: 0 auto;
+	top: 150px;
+	z-index: -1;
+	opacity: 1;
+	transition-property: top, opacity;
+	transition-duration: 1.5s;
+}
+
+#gameOver{
+	position: absolute;
+	top: 0;
+	border-radius: 25px;
+	width: 100%;
+	top: 1px;
+	background-color: rgba(0,0,0,0.5);
+	z-index: -2;
+}
+
+#rodaPe{
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;	
+	
+}
+
+#imgGameOver{
+	margin-top: 100px;
+}
+
+
+#div{
+    float: center;
+    margin-top: 20%;
+    margin-right: 20%;
+}
